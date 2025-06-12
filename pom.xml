@@ -32,11 +32,13 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+          <version>21.0.4</version> <!-- use recent version -->
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
-        </configuration>
+          <source>21</source>
+		  <target>21</target>
+	    </configuration>
       </plugin>
                     <plugin>
                    <groupId>org.apache.maven.plugins</groupId>

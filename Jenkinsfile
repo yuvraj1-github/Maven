@@ -8,7 +8,7 @@ pipeline {
 		}
 	}
 	stage ('mvn compile') {
-		stage {
+		steps {
 			withMaven(globalMavenSettingsConfig: '', jdk: 'JDK_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: '', traceability: true) {
 			sh 'compile'
 			}

@@ -10,6 +10,15 @@ pipeline {
 				git branch: 'main', credentialsId: 'GitHub', url: 'https://github.com/yuvraj1-github/Maven.git'
 			}
 		}
+		stage ('maven clean') {
+			steps {
+			withMaven(globalMavenSettingsConfig: '', jdk: 'JDK_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: '', traceability: true) {
+			sh 'mvn clean'
+			}
+				
+			}
+		
+		}
 		
 		stage ('maven compile') {
 		
@@ -44,7 +53,7 @@ pipeline {
 		
 			steps {
 			
-			deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'TOMCAT', path: '', url: 'http://localhost:9090/')], contextPath: '/myapp', war: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Mavenprojectpipeline\\webapp\\target\\webapp.war'
+			deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'Tomcat', path: '', url: 'http://localhost:9090/')], contextPath: 'myapp', war: 'webapp\\target\\webapp.war'
 			}
 		}
 	

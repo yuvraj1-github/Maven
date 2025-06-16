@@ -50,11 +50,12 @@ pipeline {
                     adapters: [[
                         $class: 'Tomcat9xAdapter',
                         credentialsId: 'TOMCAT',
-                        url: 'http://localhost:9090/manager/html'
+                        url: 'http://localhost:9090/manager/text'
                     ]]
                 ])
             }
         }
 
-    }
+    } // 🔧 This was missing — closes "stages"
 
+} // 🔧 This was missing — closes "pipeline"

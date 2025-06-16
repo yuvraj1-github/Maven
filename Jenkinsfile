@@ -40,6 +40,13 @@ pipeline {
 			}
 		
 		}
+		stage ('Deploy to tomcat') {
+		
+			steps {
+			
+			deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'TOMCAT', path: '', url: 'http://localhost:9090/')], contextPath: '/myapp', war: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Mavenprojectpipeline\\webapp\\target\\webapp.war'
+			}
+		}
 	
 	}
 }

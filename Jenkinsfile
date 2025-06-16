@@ -53,7 +53,7 @@ pipeline {
 		
 			steps {
 			
-			deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'Tomcat', path: '', url: 'http://localhost:9090/')], contextPath: 'myapp', war: 'webapp\\target\\webapp.war'
+			deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'Tomcat', path: '', url: 'http://localhost:9090/')], contextPath: 'webapp', war: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Mavenprojectpipeline\\webapp\\target'
 			}
 		}
 	

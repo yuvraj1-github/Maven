@@ -56,7 +56,6 @@ pipeline {
             }
         }
 
-    }
+    } // 🔧 This was missing — closes "stages"
 
-}
-
+} // 🔧 This was missing — closes "pipeline"

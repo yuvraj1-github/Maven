@@ -46,7 +46,7 @@ pipeline {
             steps {
                 step([$class: 'DeployPublisher',
                     war: '**/target/webapp.war',
-                    contextPath: 'webapp',
+                    contextPath: 'mybapp',
                     adapters: [[
                         $class: 'Tomcat9xAdapter',
                         credentialsId: 'TOMCAT',

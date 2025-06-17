@@ -50,7 +50,7 @@ pipeline {
                     adapters: [[
                         $class: 'Tomcat9xAdapter',
                         credentialsId: 'TOMCAT',
-                        url: 'http://localhost:9090/manager/text'
+                        url: 'http://localhost:9090/manager/html'
                     ]]
                 ])
             }
